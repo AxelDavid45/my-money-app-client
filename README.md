@@ -2,11 +2,6 @@
 
 <div align="center">
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 # SimpleMoneyApp
 
 This is an app for tracking expenses, managing budgets, and tracking debt. I aim to keep it simple. (Temporary name, still under construction)
