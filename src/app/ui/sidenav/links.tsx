@@ -53,7 +53,7 @@ const subLinks = [
 export function Links() {
   return (
     <>
-      <ul className="h-full flex-1 w-full">
+      <ul className="w-full flex-1">
         {links.map((link) => (
           <NavLink link={link} key={link.to} />
         ))}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../static/globals.css";
 import { lato } from "../static/fonts";
+import { TopNavBar } from "./ui/top-bar";
+import { NavBarSide } from "./ui/nav-side";
 
 export const metadata: Metadata = {
   title: {
@@ -18,7 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={lato.className}>{children}</body>
+      <body className={lato.className}>
+        <section className="flex min-h-screen min-w-full w-screen">
+          <NavBarSide />
+          <section className="flex flex-col w-full">
+            <TopNavBar />
+            <section className="flex-1 px-10 py-5">{children}</section>
+          </section>
+        </section>
+      </body>
     </html>
   );
 }
