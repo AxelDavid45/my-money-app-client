@@ -7,7 +7,7 @@ export default function Home() {
       <NavBarSide />
       <section className="flex flex-col w-full">
         <TopNavBar />
-        <section className="bg-orange-500 flex-1">main content</section>
+        <section className="flex-1 p-3">main content</section>
       </section>
     </section>
   );
