@@ -11,7 +11,6 @@ const config: Config = {
       sans: ["Lato", "sans-serif"],
       serif: ["serif"],
     },
-    extend: {},
   },
   plugins: [],
 };
