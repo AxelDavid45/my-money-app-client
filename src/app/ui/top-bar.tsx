@@ -21,7 +21,7 @@ export function TopNavBar() {
 
       <span className="border border-gray-300 h-7"></span>
 
-      <button className="border-3 border-gray-500 h-10 w-10  rounded-full  overflow-hidden border-2 hover:border-3 hover:border-purple-500 transition-all">
+      <button className="border-3 border-gray-500 h-5 w-5  lg:h-10 lg:w-10 rounded-full  overflow-hidden border-2 hover:border-3 hover:border-purple-500 transition-all">
         <Image
           alt="Profile picture"
           src="https://ui-avatars.com/api/?name=Axel+Espinosa"

@@ -15,6 +15,7 @@ import { AiFillMedicineBox } from "react-icons/ai";
 import { BsBank2 } from "react-icons/bs";
 import { Poppins } from "next/font/google";
 import { poppins } from "../static/fonts";
+import Link from "next/link";
 
 const font = Poppins({
   weight: ["400", "600"],
@@ -23,13 +24,13 @@ const font = Poppins({
 
 export default function Home() {
   return (
-    <main className="container">
+    <>
       <h1 className="text-2xl text-purple-600 font-bold">Welcome, Axel </h1>
       <p className="text-gray-600">
         Continue your journey to better finance management and success
       </p>
 
-      <section className="mt-10 bg-white rounded-lg flex items-center justify-center space-x-10 py-10 h-full min-h-[130px]">
+      <section className="mt-10 bg-white rounded-lg flex items-center justify-center gap-2 py-10 min-h-[130px]">
         <MainButton
           icon={<FaMinus size={15} />}
           text="Add Expense"
@@ -52,36 +53,44 @@ export default function Home() {
         />
       </section>
 
-      <section className="mt-10 flex justify-between flex-wrap gap-y-3 gap-x-10">
+      <section className="mt-10 flex flex-wrap justify-between gap-2">
         <StatsCard
-          icon={<BiSolidBank size={30} />}
-          title="$100,000.00"
+          icon={<BiSolidBank size={20} />}
+          title="$900,000.00"
           backgroudColor="bg-purple-100 text-purple-600"
           description="Total Balance"
         />
 
         <StatsCard
-          icon={<FaPiggyBank size={30} />}
+          icon={<FaPiggyBank size={20} />}
           title="10"
           backgroudColor="bg-blue-100 text-blue-400"
           description="Budgets"
         />
 
         <StatsCard
-          icon={<FaLongArrowAltUp size={30} />}
-          title="$200,000.00"
+          icon={<FaLongArrowAltUp size={20} />}
+          title="$1,000,000.00"
           description="Incomes"
           backgroudColor="bg-emerald-100 text-emerald-400"
         />
 
         <StatsCard
-          icon={<FaLongArrowAltDown size={30} />}
+          icon={<FaLongArrowAltDown size={20} />}
           title="$100,000.00"
           backgroudColor="bg-red-100 text-red-600"
           description="Expenses"
         />
       </section>
-    </main>
+
+      {/* <section className="mt-10  bg-white p-5 rounded-lg">
+        <div className="">
+          <p>Transactions</p>
+          <Link href="/">View All</Link>
+        </div>
+        <div className="">content</div>
+      </section> */}
+    </>
   );
 }
 
@@ -97,18 +106,18 @@ function StatsCard({
   backgroudColor: string;
 }) {
   return (
-    <div className="bg-white px-6 pt-12 pb-6 w-full min-w-[270px] h-full max-h-[300px] rounded-lg space-y-5 lg:w-2/12">
+    <div className="bg-white flex flex-col items-start gap-y-5 p-4 lg:flex-1 w-full h-full  rounded-lg ">
       <div
-        className={`${backgroudColor} flex justify-center h-14 w-14 rounded-full items-center`}
+        className={`${backgroudColor} flex justify-center h-10 w-10 rounded-full items-center p-3`}
       >
         {icon}
       </div>
       <p
-        className={`${poppins.className} font-extrabold text-indigo-950 text-3xl`}
+        className={`${poppins.className} font-extrabold text-indigo-950 text-2xl`}
       >
         {title}
       </p>
-      <p className="font-semibold text-gray-500 text-xl">{description}</p>
+      <p className="font-semibold text-gray-500 text-lg">{description}</p>
     </div>
   );
 }
