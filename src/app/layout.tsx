@@ -21,11 +21,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={lato.className}>
-        <section className="flex min-h-screen min-w-full w-screen">
+        <section className="flex min-h-screen w-full">
           <NavBarSide />
-          <section className="flex flex-col w-full">
+
+          <section className="flex flex-col flex-1">
             <TopNavBar />
-            <section className="flex-1 px-10 py-5">{children}</section>
+            <section className="px-10 py-5">{children}</section>
           </section>
         </section>
       </body>

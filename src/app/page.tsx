@@ -5,22 +5,14 @@ import {
   FaPiggyBank,
   FaPlus,
 } from "react-icons/fa";
-import { NavBarSide } from "./ui/nav-side";
-import { TopNavBar } from "./ui/top-bar";
-import React, { ReactNode } from "react";
-import { FaIdCardClip } from "react-icons/fa6";
-import { LuInbox } from "react-icons/lu";
-import { BiPlus, BiSolidBank } from "react-icons/bi";
+import React from "react";
+import { BiArrowFromRight, BiSolidBank } from "react-icons/bi";
 import { AiFillMedicineBox } from "react-icons/ai";
-import { BsBank2 } from "react-icons/bs";
-import { Poppins } from "next/font/google";
-import { poppins } from "../static/fonts";
 import Link from "next/link";
-
-const font = Poppins({
-  weight: ["400", "600"],
-  subsets: ["latin"],
-});
+import { StatsCard } from "./ui/home/stats-card";
+import { MainButton } from "./ui/home/buttons";
+import { IoIosArrowForward } from "react-icons/io";
+import { TransactionsCard } from "./ui/home/transactions-card";
 
 export default function Home() {
   return (
@@ -30,7 +22,7 @@ export default function Home() {
         Continue your journey to better finance management and success
       </p>
 
-      <section className="mt-10 bg-white rounded-lg flex items-center justify-center gap-2 py-10 min-h-[130px]">
+      <section className="mt-10 bg-white rounded-lg flex items-center justify-center gap-x-24  py-10 min-h-[130px]">
         <MainButton
           icon={<FaMinus size={15} />}
           text="Add Expense"
@@ -83,68 +75,33 @@ export default function Home() {
         />
       </section>
 
-      {/* <section className="mt-10  bg-white p-5 rounded-lg">
-        <div className="">
-          <p>Transactions</p>
-          <Link href="/">View All</Link>
+      <section className="mt-10 flex gap-2">
+        <div className="bg-white p-5 rounded-lg w-full">
+          <div className="flex items-center justify-between">
+            <h2 className="text-gray-800 text-2xl font-bold">
+              Transaction history
+            </h2>
+            <Link href="/" className="text-purple-500 flex items-center">
+              View All <IoIosArrowForward size={20} />
+            </Link>
+          </div>
+
+          <div className="mt-5">
+            {/* Transactions */}
+            <TransactionsCard />
+          </div>
         </div>
-        <div className="">content</div>
-      </section> */}
+
+        <div className="bg-white p-5 rounded-lg w-full">
+          <div className="flex items-center justify-between space-x-3">
+            <h2 className="text-gray-900 text-2xl font-bold">Transactions</h2>
+            <Link href="/" className="text-purple-500">
+              View All <IoIosArrowForward size={25} />
+            </Link>
+          </div>
+          <div className="">content</div>
+        </div>
+      </section>
     </>
-  );
-}
-
-function StatsCard({
-  icon,
-  title,
-  description,
-  backgroudColor,
-}: {
-  icon: ReactNode;
-  title: string;
-  description: string;
-  backgroudColor: string;
-}) {
-  return (
-    <div className="bg-white flex flex-col items-start gap-y-5 p-4 lg:flex-1 w-full h-full  rounded-lg ">
-      <div
-        className={`${backgroudColor} flex justify-center h-10 w-10 rounded-full items-center p-3`}
-      >
-        {icon}
-      </div>
-      <p
-        className={`${poppins.className} font-extrabold text-indigo-950 text-2xl`}
-      >
-        {title}
-      </p>
-      <p className="font-semibold text-gray-500 text-lg">{description}</p>
-    </div>
-  );
-}
-
-export function MainButton({
-  text,
-  mainColor,
-  backgroundColor,
-  icon,
-}: {
-  text: string;
-  icon: ReactNode;
-  mainColor: string;
-  backgroundColor: string;
-}) {
-  return (
-    <div className="flex items-center flex-col justify-center">
-      <button
-        className={`${backgroundColor} h-16 group w-16 rounded-full flex justify-center items-center flex-col `}
-      >
-        <div
-          className={`${mainColor} text-white h-8 w-8 rounded-full flex items-center  justify-center flex-col`}
-        >
-          {icon}
-        </div>
-      </button>
-      <p className="mt-2 font-semibold text-gray-500">{text}</p>
-    </div>
   );
 }
