@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     fontFamily: {
       sans: ["Lato", "sans-serif"],
-      serif: ["serif"],
+      serif: ["sans-serif"],
     },
   },
   plugins: [],

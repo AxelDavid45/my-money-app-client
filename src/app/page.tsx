@@ -78,7 +78,7 @@ export default function Home() {
       <section className="mt-10 flex gap-2">
         <div className="bg-white p-5 rounded-lg w-full">
           <div className="flex items-center justify-between">
-            <h2 className="text-gray-800 text-2xl font-bold">
+            <h2 className="text-gray-800 text-2xl font-bold font-sans">
               Transaction history
             </h2>
             <Link href="/" className="text-purple-500 flex items-center">
