@@ -1,11 +1,11 @@
-import Link from "next/link";
+import { PageProps } from "../../../.next/types/app/layout";
 import { Logo } from "./logo";
 
 import { Links } from "./sidenav/links";
 
 export function NavBarSide() {
   return (
-    <nav className="bg-white max-w-[260px] w-full px-3 flex flex-col content-between">
+    <nav className="hidden md:flex bg-white max-w-[260px] w-full px-3 flex-col content-between">
       <section className="mt-5">
         <Logo />
       </section>

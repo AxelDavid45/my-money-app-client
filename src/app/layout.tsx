@@ -4,6 +4,7 @@ import { lato } from "../static/fonts";
 import { TopNavBar } from "./ui/top-bar";
 import { NavBarSide } from "./ui/nav-side";
 
+
 export const metadata: Metadata = {
   title: {
     template: "MyMoneyApp %s",
@@ -18,6 +19,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="es">
       <body className={lato.className}>
@@ -25,7 +27,7 @@ export default function RootLayout({
           <NavBarSide />
 
           <section className="flex flex-col flex-1">
-            <TopNavBar />
+            <TopNavBar/>
             <section className="px-10 py-5">{children}</section>
           </section>
         </section>

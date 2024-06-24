@@ -1,18 +1,23 @@
+'use client'
+
 import Image from "next/image";
-import { FaSearch as SearchIcon } from "react-icons/fa";
+import { FaSearch as SearchIcon, FaBars as MenuIcon } from "react-icons/fa";
 import { IoNotifications as NotificationIcon } from "react-icons/io5";
+import { Input } from "../../components/ui/input";
+import { Button } from "../../components/ui/button";
+import { BiToggleRight } from "react-icons/bi";
+import { EventHandler, MouseEventHandler } from "react";
 export function TopNavBar() {
   return (
     <section className="min-h-[60px] border-b border-gray-300 px-4 py-2  flex items-center justify-end space-x-4">
-      <form className="relative">
-        <div className="flex items-center start-0 absolute inset-y-0 p-2 text-gray-300 pointer-events-none">
+      <Button size="icon" variant="ghost" type="button">
+        <MenuIcon size={20} />
+      </Button>
+      <form className="flex w-full max-w-sm items-center space-x-2">
+        <Input type="search" placeholder="Buscar transacción..." />
+        <Button size="icon" type="submit">
           <SearchIcon size={15} />
-        </div>
-        <input
-          type="search"
-          placeholder="Search..."
-          className="outline-none rounded-full px-4 bg-transparent text-sm py-2 min-w-[300px] w-full ps-10 text-gray-900 border border-gray-300  focus:ring focus:ring-purple-500  transition-all"
-        />
+        </Button>
       </form>
 
       <button className="text-gray-400 hover:text-purple-500">

@@ -13,13 +13,14 @@ import { StatsCard } from "./ui/home/stats-card";
 import { MainButton } from "./ui/home/buttons";
 import { IoIosArrowForward } from "react-icons/io";
 import { TransactionsCard } from "./ui/home/transactions-card";
+import { Button } from "../components/ui/button";
 
 export default function Home() {
   return (
     <>
-      <h1 className="text-2xl text-purple-600 font-bold">Welcome, Axel </h1>
+      <h1 className="text-2xl text-purple-600 font-bold">Hola, Axel </h1>
       <p className="text-gray-600">
-        Continue your journey to better finance management and success
+        Continua tu viaje hacia una mejor gestión financiera
       </p>
 
       <section className="mt-10 bg-white rounded-lg flex items-center justify-center gap-x-24  py-10 min-h-[130px]">
@@ -75,15 +76,17 @@ export default function Home() {
         />
       </section>
 
-      <section className="mt-10 flex gap-2">
+      <section className="mt-10 flex flex-wrap gap-2">
         <div className="bg-white p-5 rounded-lg w-full">
           <div className="flex items-center justify-between">
             <h2 className="text-gray-800 text-2xl font-bold font-sans">
-              Transaction history
+              Ultimas transacciones
             </h2>
-            <Link href="/" className="text-purple-500 flex items-center">
-              View All <IoIosArrowForward size={20} />
-            </Link>
+            <Button asChild>
+              <Link href="/" className="flex items-center">
+                View All <IoIosArrowForward size={20} />
+              </Link>
+            </Button>
           </div>
 
           <div className="mt-5">
