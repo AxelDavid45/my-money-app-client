@@ -45,7 +45,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="mt-10 flex flex-wrap justify-between gap-2">
+      <section className="flex flex-wrap justify-between gap-2">
         <StatsCard
           icon={<BiSolidBank size={20} />}
           title="$900,000.00"
